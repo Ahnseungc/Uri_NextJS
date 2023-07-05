@@ -10,5 +10,18 @@ export const TabBarContainer = styled.div`
   right: 0;
   background-color: white;
   height: 60px;
-  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #4848495f;
+`;
+
+export const TabIcon = styled.div`
+  font-size: 30px;
+  color: #4848495f;
+
+  &:hover {
+    color: #3c3c3c;
+    transition: 0.5s ease-in-out;
+  }
 `;
