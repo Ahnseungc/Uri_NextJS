@@ -1,16 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Tabbar from "../../Components/TabBar";
+import Layouts from '@components/Layouts';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
 const Calendar: NextPage = () => {
-  return (
-    <div>
-      calendar 페이지 입니다.
-      <Tabbar />
-    </div>
-  );
+  return <Layouts>calendar 페이지 입니다.</Layouts>;
 };
 
 export default Calendar;

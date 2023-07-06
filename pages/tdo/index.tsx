@@ -1,16 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Tabbar from "../../Components/TabBar";
+import Layouts from '../../components/Layouts';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
 const Tdo: NextPage = () => {
-  return (
-    <div>
-      Tdo 입니다.
-      <Tabbar />
-    </div>
-  );
+  return <Layouts>Tdo 입니다.</Layouts>;
 };
 
 export default Tdo;

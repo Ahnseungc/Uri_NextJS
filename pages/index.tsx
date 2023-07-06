@@ -1,18 +1,15 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import Tabbar from "../Components/TabBar";
-
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
 const Index: NextPage = () => {
   return (
     <div>
       <Head>
         <title>test</title>
-        <meta name="description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
       <main></main>
-      <Tabbar />
     </div>
   );
 };

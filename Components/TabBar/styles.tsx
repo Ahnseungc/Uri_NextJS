@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const TabBarContainer = styled.div`
   display: flex;
@@ -7,6 +7,8 @@ export const TabBarContainer = styled.div`
   position: fixed;
   left: 0;
   right: 0;
+  bottom: 0;
+  height: 6rem;
   background-color: white;
   height: 60px;
   width: 100%;
