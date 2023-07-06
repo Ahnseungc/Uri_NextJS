@@ -23,6 +23,7 @@ const Home: NextPage = () => {
           src={"/Message.png"}
           alt="/"
           width={24}
+          
           height={24}
         />
       </Header>

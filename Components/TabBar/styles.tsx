@@ -5,7 +5,6 @@ export const TabBarContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  bottom: 0;
   left: 0;
   right: 0;
   background-color: white;
