@@ -18,7 +18,8 @@ export const Header = styled.div`
 `;
 
 export const Homebody = styled.div`
-  margin-top: 103px;
+  /* margin-top: 103px; */
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,13 +1,18 @@
 import React from 'react';
 
-import Layouts from '@components/Layouts';
 import Image from 'next/image';
 
 import { Header, Homebody, Maincontainer } from './styles';
+import ChatBot from '../../components/ChatBot';
+import Layouts from '../../components/Layouts';
 
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
+  const testhandler = () => {
+    return undefined;
+  };
+
   return (
     <Layouts>
       <Maincontainer>
@@ -18,6 +23,7 @@ const Home: NextPage = () => {
         <Homebody>
           <Image src={'/Pill.png'} alt="/" width={191} height={40} />
         </Homebody>
+        <ChatBot isVisible={true} chatBotHandler={testhandler} />
       </Maincontainer>
     </Layouts>
   );
