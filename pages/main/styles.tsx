@@ -7,18 +7,34 @@ export const Maincontainer = styled.div`
 
 export const Header = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  & .message {
-    margin-left: 104px;
-  }
   & .title {
-    margin-left: 147px;
+    padding: 1rem;
+    margin-bottom: 1%;
+    width: 5%;
+    height: 3%;
+  }
+  & .pill {
+    background-color: #eef1f4;
+    color: #667080;
+    font-weight: 600;
+    width: 30%;
+    height: 70px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+  & .pill_img {
+    /* margin-bottom: 10%; */
   }
 `;
 
 export const Homebody = styled.div`
-  /* margin-top: 103px; */
   height: 100%;
   display: flex;
   flex-direction: column;

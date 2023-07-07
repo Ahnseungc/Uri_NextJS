@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import type { ChangeEvent, KeyboardEvent } from 'react';
 
+import { faArrowUp, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -118,9 +120,9 @@ const ChatBot = ({ isVisible, chatBotHandler }: IProps) => {
         />
         <SubmitButton type="submit" onClick={submitQuestion} disabled={waitAnswer}>
           {waitAnswer ? (
-            <LoadingBox>{/* <LoadingIcon src={Loading} alt="Loading" fill={true} /> */}</LoadingBox>
+            <LoadingBox>{<FontAwesomeIcon icon={faSpinner} style={{ color: 'black' }} />}</LoadingBox>
           ) : (
-            <>전송</>
+            <FontAwesomeIcon icon={faArrowUp} style={{ color: 'black' }} />
           )}
         </SubmitButton>
       </QuestionBox>

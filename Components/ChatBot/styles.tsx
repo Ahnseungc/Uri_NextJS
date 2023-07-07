@@ -1,3 +1,4 @@
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 interface IProps {
@@ -21,14 +22,15 @@ const theme = {
 export const Main = styled.div<IProps>`
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
   width: 100%;
-  height: 70%;
+  height: 50%;
   padding: 3rem;
+
   flex-direction: column;
   background-color: ${theme.colors.white};
   align-items: center;
   border-radius: 16px;
   position: absolute;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
   z-index: 9;
 `;
@@ -77,10 +79,22 @@ export const AnswerChat = styled.div`
   border-radius: 16px;
 `;
 
+const button_loading_spinner = keyframes`
+    from{
+      transform: rotate(0turn);
+    }
+    to{
+      transform: rotate(1turn);
+    }
+`;
 export const LoadingBox = styled.div`
   width: 2rem;
   height: 2rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ${button_loading_spinner} 1s ease infinite;
 `;
 
 /* ${flexBox('row', 'between', 'center')} */
@@ -93,7 +107,7 @@ export const QuestionBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
 `;
 
 export const SubmitButton = styled.button`
@@ -105,6 +119,10 @@ export const SubmitButton = styled.button`
   background-color: white;
   border: 2px solid #667080;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 `;
 
 export const ChatProfileBox = styled.div`
@@ -124,8 +142,7 @@ export const ChatUserProfileBox = styled.div`
 // export const LoadingIcon = styled(Image)``;
 
 export const ChatInput = styled.input`
-  width: 70%;
-
+  width: 80%;
   padding: 1.2rem;
   margin-right: 20px;
   font-size: 1.6rem;

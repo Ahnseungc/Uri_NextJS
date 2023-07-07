@@ -18,11 +18,12 @@ const Home: NextPage = () => {
       <Maincontainer>
         <Header>
           <Image className="title" src={'/Title.png'} alt="/" width={65} height={60} />
-          <Image className="message" src={'/Message.png'} alt="/" width={24} height={24} />
+          <div className="pill">
+            <p>오늘은 무슨 일이 있었니?</p>
+          </div>
         </Header>
-        <Homebody>
-          <Image src={'/Pill.png'} alt="/" width={191} height={40} />
-        </Homebody>
+
+        {/* <Homebody></Homebody> */}
         <ChatBot isVisible={true} chatBotHandler={testhandler} />
       </Maincontainer>
     </Layouts>
