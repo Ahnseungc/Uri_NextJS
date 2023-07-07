@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import type { ChangeEvent, KeyboardEvent } from 'react';
 
 import { faArrowUp, faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -26,10 +26,16 @@ interface IProps {
 }
 
 const ChatBot = ({ isVisible, chatBotHandler }: IProps) => {
-  const API_KEY = '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';
+  const API_KEY = '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';
   const [questions, setQuestions] = useState<any>();
   const [chat, setChat] = useState<any>([]);
   const [waitAnswer, setWaitAnswer] = useState(false);
+
+  //자동 스크롤
+  const scrollRef = useRef<HTMLDivElement | null>(undefined);
+  useEffect(() => {
+    scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [chat]);
 
   const chatAi = async (data: string) => {
     try {
@@ -91,7 +97,6 @@ const ChatBot = ({ isVisible, chatBotHandler }: IProps) => {
     <Main isVisible={isVisible}>
       <Box>
         {chat.map((el: any, idx: number) => {
-          console.log(idx);
           return (
             <React.Fragment key={el.id}>
               {idx % 2 === 0 ? (
@@ -108,6 +113,7 @@ const ChatBot = ({ isVisible, chatBotHandler }: IProps) => {
             </React.Fragment>
           );
         })}
+        <div ref={scrollRef}></div>
       </Box>
 
       <QuestionBox>

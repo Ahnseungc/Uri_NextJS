@@ -22,15 +22,14 @@ const theme = {
 export const Main = styled.div<IProps>`
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
   width: 100%;
-  height: 50%;
+  height: 70%;
   padding: 3rem;
-
   flex-direction: column;
   background-color: ${theme.colors.white};
   align-items: center;
   border-radius: 16px;
   position: absolute;
-  top: 70%;
+  top: 60%;
   transform: translateY(-50%);
   z-index: 9;
 `;
@@ -43,6 +42,7 @@ export const Box = styled.div`
   background-color: ${theme.colors.white};
   border-radius: 16px;
   overflow: scroll;
+  transition: 1s ease-in-out;
 `;
 
 /* ${flexBox('row', 'start', 'start')} */
@@ -50,11 +50,14 @@ export const ChatBox = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 2rem;
+  width: 100%;
+
+  justify-content: space-between;
 `;
 
 export const Chat = styled.div`
   box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-  width: 100%;
+  width: 50%;
   height: 100%;
   padding: 1rem;
   font-size: 1.6rem;
@@ -62,6 +65,7 @@ export const Chat = styled.div`
   background-color: #eef1f4;
   border-radius: 16px;
   margin-bottom: 1rem;
+
   color: #667080;
 `;
 
@@ -69,7 +73,7 @@ export const AnswerChat = styled.div`
   box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 50%;
   height: 100%;
   margin-bottom: 1rem;
   padding: 1rem;
