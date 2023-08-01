@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
-import { TabBarContainer, TabIcon } from "./styles";
+import { TabBarContainer, TabIcon } from './styles';
 
 const Tabbar = () => {
   return (

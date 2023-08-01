@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import { Header, Homebody, Maincontainer } from './styles';
+import { Header, Maincontainer } from './styles';
 import ChatBot from '../../components/ChatBot';
 import Layouts from '../../components/Layouts';
 
@@ -22,8 +22,6 @@ const Home: NextPage = () => {
             <p>오늘은 무슨 일이 있었니?</p>
           </div>
         </Header>
-
-        {/* <Homebody></Homebody> */}
         <ChatBot isVisible={true} chatBotHandler={testhandler} />
       </Maincontainer>
     </Layouts>

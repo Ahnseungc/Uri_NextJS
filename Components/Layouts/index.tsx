@@ -4,7 +4,7 @@ import TabBar from '../TabBar';
 
 const Layouts = (props) => {
   return (
-    <div>
+    <div style={{ height: '100%' }}>
       <TabBar />
       {props.children}
     </div>

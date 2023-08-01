@@ -26,7 +26,7 @@ interface IProps {
 }
 
 const ChatBot = ({ isVisible, chatBotHandler }: IProps) => {
-  const API_KEY = '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';
+  const API_KEY = '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';
   const [questions, setQuestions] = useState<any>();
   const [chat, setChat] = useState<any>([]);
   const [waitAnswer, setWaitAnswer] = useState(false);
