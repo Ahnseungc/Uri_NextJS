@@ -1,12 +1,18 @@
+import type { FC } from 'react';
 import React from 'react';
 
-import { Background } from './styles';
+import { Background, Name, Detail } from './styles';
 
-const TDC = () => {
+interface Props {
+  TDCD: any;
+}
+
+const TDC: FC<Props> = ({ TDCD }) => {
+  console.log(TDCD);
   return (
     <Background>
-      <div className="name"></div>
-      <div className="detail"></div>
+      <Name>{TDCD.name}</Name>
+      <Detail>{TDCD.detail}</Detail>
     </Background>
   );
 };
